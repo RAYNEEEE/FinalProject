@@ -15,8 +15,6 @@ public class Start extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_jump);
-    }
-    protected void button(Button button) {
         final Button start_1 = findViewById(R.id.start_button1);
         final Button start_2 = findViewById(R.id.start_button2);
         final Button start_3 = findViewById(R.id.start_button3);
@@ -26,7 +24,9 @@ public class Start extends AppCompatActivity {
 //                URL url = new URL("http://image10.bizrate-images.com/resize?sq=60&uid=2216744464");
 //                Bitmap bmp = BitmapFactory.decodeStream(url.openConnection().getInputStream());
 //                imageView.setImageBitmap(bmp);
-                startActivity(new Intent(Start.this, Jump.class));
+                Intent intent = new Intent(Start.this, Jump.class);
+                setContentView(R.layout.gaming_mode);
+                startActivity(intent);
             }
         });
         start_2.setOnClickListener(new View.OnClickListener() {
@@ -48,4 +48,5 @@ public class Start extends AppCompatActivity {
             }
         });
     }
+
 }
